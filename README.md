@@ -7,3 +7,4 @@ to take up less space in the repository.
 ## Project overviews
 
 ### [Lab 4: Express - Solar System](./Lab4)
+### [HW 4: Express](./HW4)
