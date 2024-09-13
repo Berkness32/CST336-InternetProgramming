@@ -1,0 +1,59 @@
+<%- include('partials/header.ejs') %>
+<body>
+
+  <h1 class="text-center mb-4">Updating Author Data</h1>
+
+    <form method="POST" action="/author/edit">
+
+      <input type="hidden" name="authorId" value="<%=authorInfo[0].authorId%>">
+
+      <div class="form-group">
+        <label for="fName">First Name:</label>
+        <input type="text" class="form-control" id="fName" name="fName" value="<%= authorInfo[0].firstName %>">
+      </div>
+
+      <div class="form-group">
+        <label for="lName">Last Name:</label>
+        <input type="text" class="form-control" id="lName" name="lName" value="<%= authorInfo[0].lastName %>">
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" class="form-control" id="dob" name="dob" value="<%= authorInfo[0].dobISO %>">
+      </div>
+
+      <div class="form-group">
+        <label>Sex:</label>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="sexM" name="sex" value="M" 
+            <% if (authorInfo[0].sex == "M") { %> checked <% } %>>
+          <label class="form-check-label" for="sexM">Male</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="sexF" name="sex" value="F" 
+            <% if (authorInfo[0].sex == "F") { %> checked <% } %>>
+          <label class="form-check-label" for="sexF">Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="profession">Profession:</label>
+        <input type="text" class="form-control" id="profession" name="profession" value="<%= authorInfo[0].profession %>">
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" class="form-control" id="country" name="country" value="<%= authorInfo[0].country %>">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Update Author</button>
+
+
+    </form>
+    <br>
+    <% if (typeof message != "undefined"){ %>
+        <h3><%=message%></h3>
+    <% } %>
+
+</body>
+</html>

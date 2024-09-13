@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+<body>
+  <h1 class="text-center mb-4">Adding a new Author</h1>
+
+
+  <form method="POST" action="/author/new">
+    First Name:
+    <input type="text" name="fName" class="form-control"><br>
+    Last Name:
+    <input type="text" name="lName" class="form-control"><br>
+    <label for="birthDate">Date of Birth:</label>
+    <input type="date" class="form-control" id="birthDate" name="birthDate"><br>
+
+    <label for="sex">Sex:</label>
+    <select class="form-control" id="sex" name="sex">
+      <option value="M">M</option>
+      <option value="W">W</option>
+    </select>
+    <br>
+    Profession: 
+    <input type="text" name="profession" class="form-control"><br>
+    Country:
+    <input type="text" name="country" class="form-control"><br>
+    Portrait:
+    <input type="text" name="portrait" class="form-control"><br>
+    Biography:
+    <input type="text" name="biography" class="form-control">
+    <br>  
+    <button class="btn btn-outline-primary w-100">Add Author</button>
+    <br><br>
+  </form>
+
+  <% if (typeof message != "undefined"){ %>
+      <h3><%=message%></h3>
+  <% } %>
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+
+
+ <h1> Quote Finder </h1>
+   <form action="/searchByKeyword">
+     Keyword: 
+     <input type="text" name="keyword" class="form-control">
+     <button class="btn btn-dark">Search by Keyword</button>
+   </form>
+  <br>
+  <form action="/searchByAuthor">
+     <select name="authorId" class="form-select">
+       <% for (author of authors) { %>
+         <option value="<%=author.authorId%>">
+           <%=author.firstName%> <%=author.lastName%>
+         </option>
+      <% } %>
+     </select>
+     <button class="btn btn-dark">Search by Author</button>
+  </form>
+
+
+</body>
+
+  <%- include("partials/footer.ejs") %>
