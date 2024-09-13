@@ -6,6 +6,7 @@ to take up less space in the repository.
 
 ## Project overviews
 
+### [HW 3: Fetch and Web APIs](./HW3)
 ### [Lab 4: Express - Solar System](./Lab4)
 ### [HW 4: Express](./HW4)
 ### [Lab 5: Quote Finder](./Lab5)
