@@ -9,3 +9,4 @@ to take up less space in the repository.
 ### [Lab 4: Express - Solar System](./Lab4)
 ### [HW 4: Express](./HW4)
 ### [Lab 5: Quote Finder](./Lab5)
+### [Lab 6: Famous Quotes - Admin](./Lab6)
